@@ -1,0 +1,10 @@
+*, *:before, *:after {box-sizing:  border-box;}
+
+#container {
+	width: 90%;
+	margin: 20px auto 0;
+}
+
+#buttons-container button {
+	margin: 10px 10px 0 0;
+}
