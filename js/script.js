@@ -33,9 +33,11 @@ $(document).ready(function() {
 		$("#gif-container").empty();
 		// gets the text of the button clicked
 		var buttonText = $(this).html();
+		// sets the limit number
+		var requestLimit = 10;
 
 		// builds the URL for the AJAX call
-		var requestUrl = "https://api.giphy.com/v1/gifs/search?q=" + buttonText + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var requestUrl = "https://api.giphy.com/v1/gifs/search?q=" + buttonText + "&api_key=dc6zaTOxFJmzC&limit=" + requestLimit;
 		console.log(requestUrl);
 
 		// ***** AJAX CALL *****
@@ -60,7 +62,6 @@ $(document).ready(function() {
 				var resultGifImg = $("<img>");
 				resultGifImg.attr("class", "img-fluid img-thumbnail");
 				resultGifImg.attr("src", resultGifStill);
-				resultGifImg.attr("width", "100%");
 				resultGifImg.attr("data-still", resultGifStill);
 				resultGifImg.attr("data-animate", resultGifAnimate);
 				resultGifImg.attr("data-state", "still");
@@ -124,7 +125,7 @@ $(document).ready(function() {
 
 		renderButtons();
 
-	}); // ***** SEARCH BUTTON EVENT *****
+	}); // ***** END SEARCH BUTTON EVENT *****
 
 	renderButtons();
 
