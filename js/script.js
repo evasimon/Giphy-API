@@ -35,7 +35,7 @@ $(document).ready(function() {
 		var buttonText = $(this).html();
 
 		// builds the URL for the AJAX call
-		var requestUrl = "http://api.giphy.com/v1/gifs/search?q=" + buttonText + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var requestUrl = "https://api.giphy.com/v1/gifs/search?q=" + buttonText + "&api_key=dc6zaTOxFJmzC&limit=10";
 		console.log(requestUrl);
 
 		// ***** AJAX CALL *****
